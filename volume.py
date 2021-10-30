@@ -14,3 +14,4 @@ def amplify(n):
 #    print("inside the ")
 #    print(__name__)
     
+    
