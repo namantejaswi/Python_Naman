@@ -10,7 +10,7 @@ def quick_sort(arr):
     if len(arr)<=1:
         return arr
     else:
-        pivot=arr[0]  #Taking first element as pivot is we dont need to update it
+        pivot=arr[0]  #Taking first element as pivot as we dont need to update it
         #We can also take the last element len(arr-1) as pivot instead of first element
         #If we take the median elment we have to calculate median for every sub problem
         
