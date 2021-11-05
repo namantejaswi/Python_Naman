@@ -26,5 +26,3 @@ def quick_sort(arr):
 if __name__=="__main__" :
     a=[34,66,17,12,4,67,8,1,99,1,81,0]
     print(quick_sort(a))
-    
-    
