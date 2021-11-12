@@ -13,10 +13,11 @@ def merge_sort(arr):
         
         left=merge_sort(arr[:mid])
         right=merge_sort(arr[mid:])
-        merged=merge(left,right)
-        print("Mergeing",left,"and",right,"into",merged)
+        #merged=merge(left,right)
+        #print("Mergeing",left,"and",right,"into",merged)
 
-    return merged
+    #return merged
+        return(merge(left,right))       #Unecessary slow down using another variable t
         
 def merge(a,b):     #Merge takes linear time ussing 2 pointers
     c=[]            #for descending order only the merge order will change
@@ -32,9 +33,11 @@ def merge(a,b):     #Merge takes linear time ussing 2 pointers
             n+=1
             
     if m<len(a):
-        c.extend(a[m:])
+        #c.extend(a[m:])
+        c[m+n:]=a[m:]
     else:
-        c.extend(b[n:])
+        #c.extend(b[n:])
+        c[m+n:]=b[n:]
     return c
  
 if __name__=="__main__":
