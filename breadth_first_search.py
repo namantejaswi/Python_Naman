@@ -11,17 +11,17 @@
 #   Adjacency list Representation:
 # Using dictionary
 graph = {'A' : ['B', 'C', 'I'],
-         'B': ['D', 'E', 'F'],
-         'C': ['H','G'],
-         'D':['L'],
-         'E':[],
-         'F':[],
-         'G':['H'],
-         'H':[],
-         'I':['J'],
+         'B': ['A','D', 'E', 'F'],
+         'C': ['H','G','A'],
+         'D':['L','B'],
+         'E':['B'],
+         'F':['B'],
+         'G':['H','C'],
+         'H':['G','C'],
+         'I':['J','A'],
          'J':['K'],
          'K':[],
-         'L':['M'],
+         'L':['M','D'],
          'M':['N'],
          'N':[],
          
@@ -63,4 +63,5 @@ def breadth_first_search(graph,start):
                 res.append(neighbour)
         print("The BFS order is ",res)
         
-breadth_first_search(graph,'A')
+breadth_first_search(graph,'L')
+
