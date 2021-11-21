@@ -48,20 +48,23 @@ def breadth_first_search(graph,start):
        
     qeue.append(start)
     is_visited.append(start)
-    res.append(start)
     
     while(len(qeue)!=0):
         v=qeue.pop(0)
         print("Completely explored ",v)
         
         for neighbour in graph[v]:
-            if neighbour not in is_visited:
+            # for an efficient implementation we can index alphabetically the vertices 
+            # and use boolean array for constant time lookup instead of linear time 
+            if neighbour not in is_visited:     
                 is_visited.append(neighbour)
             
                 print("The vertex ",graph[v]," is connected to ",neighbour)
                 qeue.append(neighbour)
-                res.append(neighbour)
+        res.append(v)
         print("The BFS order is ",res)
         
-breadth_first_search(graph,'L')
+
+if __name__ == '__main__':
+    breadth_first_search(graph,'L')
 
